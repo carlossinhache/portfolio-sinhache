@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --green-uno: rgb(0, 154, 34);
+  --green-dos: rgb(54, 186, 1);
+  --green-tres: rgb(0, 255, 43);
+}
+
+body {
+  background-color: #000000;
+}
+
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+.magic>.magic-text {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(to right,
+      var(--green-uno),
+      var(--green-dos),
+      var(--green-tres),
+      var(--green-uno));
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
