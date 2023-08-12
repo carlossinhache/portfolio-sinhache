@@ -2,16 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Minecraft";
+  src: url("../fonts/Minecraft.ttf");
+}
+.mc-font {
+  font-family: "Minecraft";
+}
 :root {
-  --green-uno: rgb(0, 154, 34);
-  --green-dos: rgb(54, 186, 1);
-  --green-tres: rgb(0, 255, 43);
+  --green-uno: #009a22;
+  --green-dos: #36ba01;
+  --green-tres: #00ff2b;
 }
 
 body {
   background-color: #000000;
 }
-
 
 @keyframes background-pan {
   from {
@@ -22,16 +28,64 @@ body {
     background-position: -200% center;
   }
 }
-
-.magic>.magic-text {
-  animation: background-pan 3s linear infinite;
-  background: linear-gradient(to right,
-      var(--green-uno),
-      var(--green-dos),
-      var(--green-tres),
-      var(--green-uno));
+.magic > .magic-text {
+  animation: background-pan 2.5s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--green-uno),
+    var(--green-dos),
+    var(--green-tres),
+    var(--green-uno)
+  );
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
+}
+
+.glowingbtn {
+  line-height: 1.8rem;
+  border-radius: 9.5px;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  position: relative;
+  background-color: #000000;
+  color: #f4f4f5;
+  transition: background-color 0.2s ease-in-out;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer; /* Not included according to website */
+}
+
+.glowingbtn:hover {
+  background-color: #0c0c0d;
+}
+
+.glowingbtn:before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(
+    to right,
+    var(--green-uno),
+    var(--green-dos),
+    var(--green-tres)
+  );
+  inset: -2px;
+  z-index: -1;
+  border-radius: 12.5px;
+  transition: all 0.2s ease 0s;
+}
+
+.glowingbtn:hover:before {
+  box-shadow: rgba(0, 220, 130, 0.5) 0px 0px 10px 0px,
+    rgba(54, 228, 218, 0.5) 0px 0px 20px 0px;
+}
+
+.glowingbtn > .btnText {
+  text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  word-break: break-all;
 }
