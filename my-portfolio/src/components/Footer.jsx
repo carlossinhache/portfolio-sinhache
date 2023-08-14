@@ -8,7 +8,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="max-w-[1240px] mx-auto py-16 grid lg:grid-cols-3 gap-8 text-gray-300">
+    <footer className="max-w-[1240px] mx-auto py-16 grid lg:grid-cols-3 gap-8 text-gray-300">
       <div>
         <h1 className="w-full text-3xl font-bold text-[#00ff2b]">
           carlossinhache{" "}
@@ -25,6 +25,7 @@ const Footer = () => {
           <FaDiscord size={30} />
         </div>
       </div>
+
       <div className="lg:col-span-2 flex justify-between mt-6">
         <div>
           <h6 className="font-medium text-gray-400">Solutions</h6>
@@ -36,7 +37,7 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

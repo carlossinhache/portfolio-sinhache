@@ -89,3 +89,15 @@ body {
   -webkit-line-clamp: 1;
   word-break: break-all;
 }
+
+.catFacMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.catFacMain .catFacImg {
+  max-width: 320px;
+  height: auto;
+}

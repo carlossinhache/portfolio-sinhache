@@ -27,9 +27,11 @@ const Navbar = () => {
           </a>
         </li>
         <li className="p-4">
+          <a href="https://twitter.com/csinhache"></a>
           <FaTwitterSquare size={30} />
         </li>
         <li className="p-4">
+          <a href="https://www.linkedin.com/in/carlosoz/"></a>
           <FaLinkedin size={30} />
         </li>
         <li className="p-4">

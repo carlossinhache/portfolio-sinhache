@@ -3,16 +3,14 @@ import Navbar from "./components/Navbar.jsx";
 import Info from "./components/Info.jsx";
 import MoreInfo from "./components/MoreInfo.jsx";
 import Footer from "./components/Footer.jsx";
-// import Foo from "./components/Foo.jsx";
+// import CatFacts from "./components/CatFacts.jsx";
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
       <Navbar />
       <Info />
-      {/* <Foo /> */}
+      {/* <CatFacts /> */}
       <MoreInfo />
       <Footer />
     </>
